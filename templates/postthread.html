@@ -1,0 +1,21 @@
+<!doctype html>
+
+{% if not post %}
+	404: This shit ain't real.
+{% endif %}
+<h3>{{ post.title }}</h3>{{ post.postid }}<br/>
+{{ post.content }} <br/>
+
+<form action="#" method='post'>
+Name: <input type="text" name="myname"><br/>
+<input type="text" name="responsebody"> <input type="submit" value="Post Reply"><br/>
+</form>
+{% if not replies %}
+	No replies :C
+{% endif %}
+
+{% for reply in replies %}
+<div id="reply" style="outline: 1px solid black; width: content;">
+<span style="display:inline;"> {{reply.owner}} <br/> {{ reply.content }} </span>
+</div> 
+{% endfor %}

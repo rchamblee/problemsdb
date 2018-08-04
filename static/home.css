@@ -1,0 +1,17 @@
+form {
+	background-color:lightblue;
+	border: .1em solid green;
+}
+body {
+	background-color:lightgray;
+}
+a,li {
+	text-decoration: none;
+}
+li {
+	border: .1em solid black;
+}
+div[name = "postblock"] {
+	position:center;
+	width: 60%
+}
